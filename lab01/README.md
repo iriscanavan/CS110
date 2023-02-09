@@ -7,7 +7,7 @@
 
 ## Author
 
-[Iris Canavan](https://github.com/iriscanavan)
+[Iris Canavan](https://github.com/iriscanavan)\
 Student ID: 20679460
 
 ## Problems
