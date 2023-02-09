@@ -1,7 +1,7 @@
 # Lab01
 
 - A program printing the product of the first five positive integers.
-- A program that prints a house
+- A program that prints a house.
 - A program that has user input two integers and prints the difference, product,
   average, distance, maximum and minimum.
 
