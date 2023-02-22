@@ -1,3 +1,5 @@
+# Iris Canavan, Section 3
+
 from math import trunc
 
 PRICE_RASPBERRIES = 1.75
@@ -6,13 +8,14 @@ PRICE_APPLE = 0.5
 PRICE_MANGO = 1.75
 
 lbs_rasp = float(input("Please enter how many pounds of raspberries you would" +
-		       " like to buy ($1.75/lb): "))
+		       " like to buy ($" + str(PRICE_RASPBERRIES) + "/lb): "))
 lbs_straw = float(input("Please enter how many pounds of strawberries you" +
-			" would like to buy ($1.25/lb): "))
+			" would like to buy ($" +
+			str(PRICE_STRAWBERRIES) + "/lb): "))
 lbs_apple = float(input("Please enter how many apples you would like to buy" +
-			" ($0.5 each): "))
+			" ($" + str(PRICE_APPLE) + " each): "))
 lbs_mango = float(input("Please enter how many mangoes you would like to buy" +
-			" ($1.75 each): "))
+			" ($" + str(PRICE_MANGO) + " each): "))
 customer_price = float(input("How much will you pay for the fruit? $"))
 
 cost_rasp = lbs_rasp * PRICE_RASPBERRIES
