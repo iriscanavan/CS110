@@ -7,6 +7,10 @@ PRICE_STRAWBERRIES = 1.25
 PRICE_APPLE = 0.5
 PRICE_MANGO = 1.75
 
+print()
+
+print("Welcome to the Healthy Fruits Shop!" + "\n")
+
 lbs_rasp = float(input("Please enter how many pounds of raspberries you would" +
 		       " like to buy ($" + str(PRICE_RASPBERRIES) + "/lb): "))
 lbs_straw = float(input("Please enter how many pounds of strawberries you" +
