@@ -18,7 +18,7 @@ strings.
 
 ## Resources
 
-I looked over the slides and examples from class.  
+I looked over the slides and examples from class.
 
 ## Helper
 
