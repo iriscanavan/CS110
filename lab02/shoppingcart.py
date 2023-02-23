@@ -38,7 +38,7 @@ while customer_price < store_total:
 	customer_price += add_money
 
 change = customer_price - store_total
-print("Change due: $" + str(change) + "\n")
+print("Change due: $" + str(round(change, 2)) + "\n")
 
 # bills
 BILL_FIVE_VALUE = 5;
