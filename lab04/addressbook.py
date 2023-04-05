@@ -14,7 +14,7 @@ def main():
 	elif choice == "5":
 		again = input("Do you want to continue? (y/n): ")
 		if again == "y":
-			fmenu()
+			main()
 		while again != "y" and again != "n":
 			again = input("Do you want to continue? (y/n): ")
 
@@ -97,7 +97,7 @@ def fdelete_contact():
 			location = line
 			line_number = 0
 		if delete_contact != name.rstrip() and line_number == 0:
-			directory += space
+			directory += dash_line
 			directory += name
 			directory += address
 			directory += location
