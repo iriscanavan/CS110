@@ -1,3 +1,7 @@
 *.txt
 !contacts.txt
+
 *.csv
+
+project01/data/
+project01/expected_output/
