@@ -1,8 +1,11 @@
 class Day:
-	def __init__(self, date, cases):
+	__date = None
+	__cumulativeCases = None
+
+	def __init__(self, date, cumulativeCases):
 		self.__date = date
-		self.__cases = cases
+		self.__cumulativeCases = cumulativeCases
 
 	def writeData(self, fpath):
 		file = open(fpath, "a")
-		file.write(self.__date + "," + self.__cases + "\n")
+		file.write(self.__date + "," + self.__cumulativeCases + "\n")
