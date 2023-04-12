@@ -11,10 +11,6 @@ Suzan
 45 Hope St
 Emeryville, CA 94512
 ------------------------------
-Iris
-2345 Golden Gate Ave
-San Francisco, CA 94118
-------------------------------
 Karen
 69 Happy St
 Mill Valley, CA 94941
