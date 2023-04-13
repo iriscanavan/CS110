@@ -15,6 +15,14 @@ def read_input_file(fpath):
 				yearly_daily_data.append(Day(line[0], line[4]))
 		return yearly_daily_data
 
+def calc_avg(daily_data):
+	for i in range(len(daily_data)):
+		if (i > 5):
+			seven_day_total = 0
+			for j in range(7):
+				k = i - j # 7 days backwards in the list
+				seven_day_total += daily_data[k].getCumulativeCases()
+			daily_data[i].setSevenDayAverageCases(seven_day_total / WINDOW)
 
 def main():
 	daily_data = []
@@ -31,5 +39,8 @@ def main():
 	for i in range(len(daily_data)):
 		if (daily_data[i].getNewDailyCases() >= 2000):
 			daily_data[i].writeData(FILE_PATH_OUTPUT)
+
+	calc_avg(daily_data)
+
 
 main()
