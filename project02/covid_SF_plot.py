@@ -12,8 +12,8 @@ def plot_SF_covid(fpath, date, seven_day_average):
 			seven_day_average.append(line[2])
 
 def main():
-	date = [] # x axis
-	seven_day_average = [] # y axis
+	date = [] # x-axis
+	seven_day_average = [] # y-axis
 	plot_SF_covid(FILE_PATH_OUTPUT, date, seven_day_average)
 
 	ax = plt.axes()
