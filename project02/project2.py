@@ -23,6 +23,7 @@ def calc_avg(daily_data):
 				k = i - j # 7 days backwards in the list
 				seven_day_total += daily_data[k].getCumulativeCases()
 			daily_data[i].setSevenDayAverageCases(seven_day_total / WINDOW)
+	return daily_data
 
 def main():
 	daily_data = []
@@ -40,7 +41,6 @@ def main():
 		if (daily_data[i].getNewDailyCases() >= 2000):
 			daily_data[i].writeData(FILE_PATH_OUTPUT)
 
-	calc_avg(daily_data)
-
+	daily_data = calc_avg(daily_data)
 
 main()
