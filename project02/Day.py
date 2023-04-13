@@ -26,4 +26,4 @@ class Day:
 
 	def writeData(self, fpath):
 		file = open(fpath, "a")
-		file.write(self.__date + "," + self.__cumulativeCases + "\n")
+		file.write(str(self.__date) + "," + str(self.__cumulativeCases) + "," + str(self.__sevenDayAverageCases) + "\n")

@@ -25,6 +25,11 @@ def calc_avg(daily_data):
 			daily_data[i].setSevenDayAverageCases(seven_day_total / WINDOW)
 	return daily_data
 
+def write_data(daily_data):
+	for i in range(len(daily_data)):
+		if (daily_data[i].getNewDailyCases() >= 2000):
+			daily_data[i].writeData(FILE_PATH_OUTPUT)
+
 def main():
 	daily_data = []
 	for i in range(0, 3):
@@ -37,10 +42,8 @@ def main():
 	for i, value in enumerate(daily_data[1:], 1):
 		daily_data[i].setNewDailyCases(daily_data[i].getCumulativeCases() - daily_data[i - 1].getCumulativeCases())
 
-	for i in range(len(daily_data)):
-		if (daily_data[i].getNewDailyCases() >= 2000):
-			daily_data[i].writeData(FILE_PATH_OUTPUT)
-
 	daily_data = calc_avg(daily_data)
+
+	write_data(daily_data)
 
 main()
