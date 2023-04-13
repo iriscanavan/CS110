@@ -1,13 +1,9 @@
 class Day:
-	__date: str
-	__cumulativeCases: int
-	__newDailyCases: int
-	__sevenDayAverageCases: float
-
 	def __init__(self, date, cumulativeCases):
-		self.__date = date
-		self.__cumulativeCases = cumulativeCases
-		self.__sevenDayAverageCases = 0
+		self.__date: str = date
+		self.__cumulativeCases: int = cumulativeCases
+		__newDailyCases: int = None
+		self.__sevenDayAverageCases: float = 0
 
 	def getCumulativeCases(self):
 		return int(self.__cumulativeCases)
