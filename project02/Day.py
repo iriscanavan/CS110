@@ -1,5 +1,5 @@
 class Day:
-	__date: int
+	__date: str
 	__cumulativeCases: int
 	__newDailyCases: int
 	__sevenDayAverageCases: float
