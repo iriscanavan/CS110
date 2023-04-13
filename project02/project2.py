@@ -29,6 +29,7 @@ def main():
 		daily_data[i].setNewDailyCases(daily_data[i].getCumulativeCases() - daily_data[i - 1].getCumulativeCases())
 
 	for i in range(len(daily_data)):
-		daily_data[i].writeData(FILE_PATH_OUTPUT)
+		if (daily_data[i].getNewDailyCases() >= 2000):
+			daily_data[i].writeData(FILE_PATH_OUTPUT)
 
 main()
