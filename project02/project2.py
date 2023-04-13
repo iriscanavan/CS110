@@ -14,7 +14,7 @@ def read_input_file(fpath):
 		yearly_daily_data = []
 		for line in data_file:
 			if (line[1] == "San Francisco"):
-				yearly_daily_data.append(Day(line[0], line[4]))
+				yearly_daily_data.append(Day(line[0], int(line[4])))
 		return yearly_daily_data
 
 def calc_avg(daily_data):

@@ -6,20 +6,20 @@ class Day:
 		self.__sevenDayAverageCases: float = 0
 
 	def getCumulativeCases(self):
-		return int(self.__cumulativeCases)
+		return self.__cumulativeCases
 
 	def setNewDailyCases(self, newDailyCases):
 		self.__newDailyCases = newDailyCases
 
 	def getNewDailyCases(self):
-		return int(self.__newDailyCases)
+		return self.__newDailyCases
 
 	def setSevenDayAverageCases(self, sevenDayAverageCases):
 		self.__sevenDayAverageCases = sevenDayAverageCases
 
 	def getSevenDayAverageCases(self):
-		return float(self.__sevenDayAverageCases)
+		return self.__sevenDayAverageCases
 
 	def writeData(self, fpath):
 		file = open(fpath, "a")
-		file.write(str(self.__date) + "," + str(self.__cumulativeCases) + "," + str(self.__sevenDayAverageCases) + "\n")
+		file.write(self.__date + "," + str(self.__cumulativeCases) + "," + str(self.__sevenDayAverageCases) + "\n")
