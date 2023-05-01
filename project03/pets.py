@@ -98,13 +98,13 @@ class Fish:
 		self.__color = color
 
 	def __str__(self):
-		return f"{self.__name} is a {self.__color} {self.__fish_type} born on {self.__birthdate}"
+		return f"{self.__name} is an {self.__color} {self.__fish_type} born on {self.__birthdate}"
 
 class Bird:
 	def __init__ (self, name, birthdate, bird_type, color):
 		self.__name = name
 		self.__birthdate = birthdate
-		self.__fish_type = bird_type
+		self.__bird_type = bird_type
 		self.__color = color
 
 	def get_name(self):
