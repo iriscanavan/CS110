@@ -19,25 +19,22 @@ def frmRegister():
 	<!DOCTYPE HTML>
 	<html>
 		<head>
-			<meta charset="UTF-8">
+			<meta charset = "UTF-8">
 			<title>Input Controls</title>
-			<meta name="description" content="form input controls">
-			<meta name="keywords" content="html sample page">
+			<meta name = "description" content = "form input controls">
+			<meta name = "keywords" content = "html sample page">
 		</head>
 		<body>
-			<h1>Using input controls</h1>
+			<h1>Register</h1>
 			<hr />
-				<p>
-					Below is an example of using the form tag with input controls:
-				</p>
-				<form action="/register" method="post">
-					First Name: <input type="text" name="fName" placeholder="Enter first name" required/>
+				<form action = "/register" method = "post">
+					First Name: <input type = "text" name = "fName" placeholder = "Enter first name" required/>
 					<br />
-					Last Name: <input type="text" name="lName" placeholder="Enter last name" required/>
+					Last Name: <input type = "text" name = "lName" placeholder = "Enter last name" required/>
 					<br />
-					Email: <input type="text" name="email" placeholder="Enter email address" required/>
+					Email: <input type = "text" name = "email" placeholder = "Enter email address" required/>
 					<hr />
-					<input type="submit" value="Register">
+					<input type = "submit" value = "Register">
 				</form>
 		</body>
 	<html>"""
@@ -55,8 +52,6 @@ def fRegister():
 	  last = ""
 
 	return ("<h1>Thank you for Registering</h1>" + first + " " + last + "<br /><br />" + email)
-
-
 
 if __name__ == "__main__":
 	app.run(host = "127.0.0.1", port = 4000, debug = True)
