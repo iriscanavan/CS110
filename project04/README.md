@@ -5,7 +5,7 @@ information.
 
 ## Author
 
-Iris Canavan <https://github.com/iriscanavan/cs110>
+Iris Canavan <https://github.com/iriscanavan/cs110>\
 Student ID: 20679460
 
 ## Problems
