@@ -5,7 +5,7 @@ pay_rate = 0
 
 def main():
 	print("Welcome to the Payroll Manager!")
-	print("-------------------------------------------------------------------------------------------")
+	print("-" * 90)
 	salary = 40 * pay_rate
 	sum_salary = 0
 	sum_overtime_pay = 0
@@ -24,7 +24,7 @@ def main():
 	salary, overtime_salary = fPayroll("Suzanne", 38.00, 19.21)
 	sum_salary += salary
 	sum_overtime_pay += overtime_salary
-	print("-------------------------------------------------------------------------------------------")
+	print("-" * 90)
 	print("Sum Regular Pay: $", format(sum_salary, '.2f'))
 	print("Sum Overtime Pay: $", format(sum_overtime_pay, '.2f'))
 
