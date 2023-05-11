@@ -1,16 +1,16 @@
 # Iris Canavan, Section 3
 
 def main():
-	fmenu()
+	menu()
 	choice = menu_choice
 	if choice == "1":
-		fprint_address_book()
+		print_address_book()
 	elif choice == "2":
-		fsearch_contact()
+		search_contact()
 	elif choice == "3":
-		fadd_contact()
+		add_contact()
 	elif choice == "4":
-		fdelete_contact()
+		delete_contact()
 	elif choice == "5":
 		again = input("Do you want to continue? (y/n): ")
 		if again == "y":
@@ -18,7 +18,7 @@ def main():
 		while again != "y" and again != "n":
 			again = input("Do you want to continue? (y/n): ")
 
-def fmenu():
+def menu():
 	print("----MENU----------------------")
 	print("    Print Address Book (1)")
 	print("    Search Contact (2)")
@@ -32,14 +32,14 @@ def fmenu():
 		menu_choice = input("Enter your choice: ")
 	return menu_choice
 
-def fprint_address_book():
-	file = ffile_open("contacts.txt", "r")
+def print_address_book():
+	file = file_open("contacts.txt", "r")
 	print(file.read())
 	file.close()
 
-def fsearch_contact():
+def search_contact():
 	search_contact = input("Name of contact you are searching for: ")
-	file = ffile_open("contacts.txt", "r")
+	file = file_open("contacts.txt", "r")
 	line_number = 1
 	boolFound = False
 	for line in file:
@@ -65,11 +65,11 @@ def fsearch_contact():
 	if not boolFound:
 		print(search_contact, "not found in address book")
 
-def fadd_contact():
+def add_contact():
 	name = input("Enter name: ")
 	address = input("Enter street address: ")
 	location = input("Enter city, state and zipcode: ")
-	file = ffile_open("contacts.txt", "a")
+	file = file_open("contacts.txt", "a")
 	file.write("-" * 30)
 	file.write("\n")
 	file.write(name)
@@ -80,9 +80,9 @@ def fadd_contact():
 	file.write("\n")
 	file.close()
 
-def fdelete_contact():
+def delete_contact():
 	delete_contact = input("Name of contact you want to delete from the address book: ")
-	file = ffile_open("contacts.txt", "r")
+	file = file_open("contacts.txt", "r")
 	directory = ""
 	name = ""
 	line_number = 1
@@ -103,11 +103,11 @@ def fdelete_contact():
 			directory += location
 		line_number += 1
 	file.close()
-	file = ffile_open("contacts.txt", "w")
+	file = file_open("contacts.txt", "w")
 	file.write(directory)
 	file.close()
 
-def ffile_open(fileName, mode):
+def file_open(fileName, mode):
 	try:
 		file_open = open("contacts.txt", mode)
 		return file_open
