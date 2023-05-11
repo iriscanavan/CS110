@@ -13,11 +13,3 @@ Student ID: 20679460
 
 It was difficult to figure out how to delete contacts and to print out the
 entire contacts information when a user searched.
-
-## Resources
-
-I used the slides from class or looked up any other questions I had.
-
-## Teamwork
-
-Lauren Jardiolin
