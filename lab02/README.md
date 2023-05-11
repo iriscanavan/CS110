@@ -15,7 +15,3 @@ Student ID: 20679460
 In the shoppingcart.py, it was difficult to figure out how to calculate
 and correctly print the number of fives, ones, quarters, dimes, nickels, and
 pennies to give back to the customer as change.
-
-## Resources
-
-I looked over the slides and examples from class as well used online resources.
