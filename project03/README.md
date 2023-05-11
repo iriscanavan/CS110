@@ -15,7 +15,3 @@ Student ID: 20679460
 
 I wrote my CSV file wrong because I thought each value was seperated with a
 comma and space.
-
-## Teamwork
-
-Joscelyn & Jack
