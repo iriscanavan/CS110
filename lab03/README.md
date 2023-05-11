@@ -13,7 +13,3 @@ Student ID: 20679460
 
 In payroll.py, it was difficult to figure out the rounding and getting it to
 correctly calculate the salaries with overtime pay.
-
-## Resources
-
-I used the slides from class lecture.
