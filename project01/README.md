@@ -21,11 +21,3 @@ calculate
 [Iris Canavan](https://github.com/iriscanavan)\
 Student ID: 20679460
 
-## Problems
-
-No problems faced.
-
-## Resources
-
-I used online resources to better understand the various elements within the
-assignment.
