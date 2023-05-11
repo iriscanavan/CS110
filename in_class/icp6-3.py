@@ -4,23 +4,23 @@ def main():
     print("Welcome to my calculator ")
     length = float(input("Enter length: "))
     width = float(input("Enter width: "))
-    strOperation = input("What do you want to calculate? (area (a), circumference (c)): ")
-    fOperations(strOperation, length, width)
+    str_operation = input("What do you want to calculate? (area (a), circumference (c)): ")
+    operations(str_operation, length, width)
 
-def fOperations(pOperation, pLength, pWidth):
+def operations(pOperation, pLength, pWidth):
     if pOperation == "a":
-        Result = fCalcArea(pLength, pWidth)
-        print("The Area of the rectangle = ", Result)
+        result = calc_area(pLength, pWidth)
+        print("The Area of the rectangle = ", result)
     elif pOperation == "c":
-        Result= fCalcCircumference(pLength, pWidth)
-        print("The circumference of the rectangle = ", Result)
+        result= calc_circumference(pLength, pWidth)
+        print("The circumference of the rectangle = ", result)
 
-def fCalcArea(pLength, pWidth):
-    Result = pLength * pWidth
-    return Result
+def calc_area(pLength, pWidth):
+    result = pLength * pWidth
+    return result
 
-def fCalcCircumference(pLength, pWidth):
-    Result = 2 * (pWidth + pLength)
-    return Result
+def calc_circumference(pLength, pWidth):
+    result = 2 * (pWidth + pLength)
+    return result
 
 main()
