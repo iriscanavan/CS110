@@ -1,6 +1,4 @@
-# Name: Iris Canavan
-# CS 110
-# Project 1: DNA analysis
+# Iris Canavan, Section 3
 
 # This project is based on Michaels Ernt's assignment on DNA analysis
 
