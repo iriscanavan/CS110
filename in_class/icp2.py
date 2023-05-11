@@ -1,3 +1,5 @@
+# Iris Canavan, Section 3
+
 import turtle
 turtle.showturtle()
 
