@@ -10,16 +10,6 @@
 [Iris Canavan](https://github.com/iriscanavan)\
 Student ID: 20679460
 
-## Problems
-
-In integeroperations.py, it was difficult to figure out how to print the
-inputted numbers because I was not aware that I needed to type cast numbers into
-strings.
-
-## Resources
-
-I looked over the slides and examples from class.
-
 ## Helper
 
 [Yiyu Zhou](https://github.com/yzhou216)
