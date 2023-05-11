@@ -1,13 +1,13 @@
 # Iris Canavan, Section 3
 
-def fread_file():
+def read_file():
 	file = open("WorldSeriesWinners.txt", "r")
 	return file.readlines()
 	file.close()
 
-def fcreate_dictionary(pWSW):
+def create_dictionary(WSW):
 	num_times_WSW = {}
-	for line in pWSW:
+	for line in WSW:
 		line = line.strip('\n')
 		if line == "World Series Not Played in 1904" or line == "World Series Not Played in 1994":
 			continue
@@ -18,10 +18,11 @@ def fcreate_dictionary(pWSW):
 	return num_times_WSW
 
 def main():
-	lst_WSW = fread_file()
-	dct_WSW = fcreate_dictionary(lst_WSW)
-	print("Team						Num of Wins")
+	lst_WSW = read_file()
+	dct_WSW = create_dictionary(lst_WSW)
+	print("Team".ljust(30) + "Num of wins".rjust(15))
 	for team, wins in dct_WSW.items():
-		print(team, "-" * 30, wins,)
+		team_padding = 34 - len(team)
+		print(team + "-" * team_padding + str(wins))
 
 main()
