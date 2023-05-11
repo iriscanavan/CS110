@@ -9,13 +9,13 @@ strHTML_bottom = "</body></html>"
 
 @app.route("/")
 @app.route("/home")
-def fHome():
+def home():
 	strHTML = strHTML_top + "<h1>This is the home page!</h1>" + strHTML_bottom
 	return strHTML
 
 @app.route("/form")
-def frmRegister():
-	strForm = """
+def form_register():
+	str_form = """
 	<!DOCTYPE HTML>
 	<html>
 		<head>
@@ -38,10 +38,10 @@ def frmRegister():
 				</form>
 		</body>
 	<html>"""
-	return strForm
+	return str_form
 
 @app.route("/register", methods = ["GET", "POST"])
-def fRegister():
+def register():
 	first = request.form.get("fName")
 	last = request.form.get("lName")
 	email = request.form.get("email")
