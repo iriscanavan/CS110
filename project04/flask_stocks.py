@@ -1,4 +1,7 @@
+# Iris Canavan, Section 3
 from flask import Flask, request
+import requests
+import json
 
 app = Flask(__name__)
 
@@ -41,14 +44,29 @@ def get_stock():
 
 @app.route("/stock_result", methods = ["POST"])
 def stock_result():
-	opening = request.form["1check"]
-	if opening:
-		return "The values for AAPL are: /n Opening value: "
-		
-#high = request.form["2check"]
-#low = request.form["3check"]
-#current = request.form["4check"]
+	result = ""
+	symbol = request.form.get("stock_symbol")
+	opening = request.form.get("1check")
+	high = request.form.get("2check")
+	low = request.form.get("3check")
+	current = request.form.get("4check")
 
-
+	if symbol == "AAPL":
+		data = requests.get("https://www.alphavantage.co/query?function=GLOBAL_QUOTE&datatype=json&apikey=VPVN3LZF0ZVPNXB2&symbol=" + symbol)
+		stock_response = json.loads(data.text)
+		result += "The values for " + symbol + " are:<br>"
+		values = stock_response["Global Quote"]
+		if opening:
+			result += "Opening value: " + values["02. open"] + "<br>"
+		if high:
+			result += "High: " + values["03. high"] + "<br>"
+		if low:
+			result += "Low: " + values["04. low"] + "<br>"
+		if current:
+			result += "Current price: " + values["05. price"] + "<br>"
+	else:
+		return (symbol + " is an invalid stock symbol")
+	return result
+	
 if __name__ == "__main__":
 	app.run(host = "127.0.0.1", port = 4000, debug = True)
