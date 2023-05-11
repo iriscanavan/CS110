@@ -9,7 +9,6 @@ app = Flask(__name__)
 
 def get_stock():
 	html = """
-	<!DOCTYPE HTML>
 	<html>
 		<head>
 			<meta charset = "UTF-8">
